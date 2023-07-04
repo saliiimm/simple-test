@@ -14,6 +14,7 @@ nav {
   position: fixed;
   background-color: green;
   color: beige;
+  z-index: 5;
 }
 nav ul {
   word-spacing: 0.5cm;
@@ -57,19 +58,52 @@ section {
 
 #home {
   background-color: whitesmoke;
+  text-align: center;
 }
 #presentation {
   background-color: #547254;
+  text-align: center;
 }
+
 #about {
   background-color: #6081c3;
 }
 #palmares {
   background-color: rgb(164, 20, 20);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 40PX;
+
+}
+.grid{
+  height: 200px;
+  width: 150px;
+  background-color: #03163b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.grid:hover{
+  transform: scale(1.1);
+
 }
 #contact {
   background-color: #03163b;
   color: white;
+}
+#contact div {
+ height: 250px;
+ width: 200px;
+ display: flex;
+ flex-direction: column;
+justify-content: space-between;
+padding: 10px;
+ border: solid white 1px;
+ border-radius: 20px;
+ text-align: center;
 }
 
 .active-section {
@@ -112,4 +146,27 @@ section {
 }
 .test1 {
   color: aqua;
+}
+
+@media screen and (max-width: 580px) {
+  #palmares {
+    background-color: rgb(164, 20, 20);
+    display: grid;
+    grid-template-columns:  auto auto;
+    gap: 40PX;
+  
+  }
+}
+@media screen and (max-width: 370px) {
+  #palmares {
+    background-color: rgb(164, 20, 20);
+    display: grid;
+    grid-template-columns:  auto ;
+    gap: 40PX;
+  
+  }
+  #palmares {
+   height: auto !important;
+  
+  }
 }
